@@ -5,7 +5,8 @@
 rm(list=ls())
 dfurl = read.csv("data/idurl.csv",stringsAsFactors = F)
 dfp = read.csv("data/paires.csv",stringsAsFactors = F)
-dfurl$id = seq(0,nrow(dfurl)-1)
+# dfurl$id = seq(0,nrow(dfurl)-1)
+dfurl$id = seq(1,nrow(dfurl))
 essai = merge(x = dfp,
               y =dfurl,
               by.x = "a",
