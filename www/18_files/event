@@ -1,0 +1,23 @@
+﻿/*<!--*/(function() {var qss="&cb="+Math.floor(99999999999*Math.random());try{qss+="&ref="+encodeURIComponent(document.referrer)}catch(e){}try{qss+="&sc_r="+encodeURIComponent(screen.width+"x"+screen.height)}catch(e){}try{qss+="&sc_d="+encodeURIComponent(screen.colorDepth.toString())}catch(e){}var callDis=function(e,t,n,o){function c(){callDisInternal(e,t,n,o)}"complete"===document.readyState?setTimeout(c):window.addEventListener?window.addEventListener("load",c,!1):window.attachEvent("onload",c)},disCalled=!1,callDisInternal=function(e,t,n,o){if(!disCalled){disCalled=!0;var c=(n?"https:":"")+"//"+t+"/dis/dis.aspx",r=document.createElement("iframe");if(r.width=r.height="0",r.style.display="none",r.title="Criteo DIS iframe",void 0!==o&&""!==o&&(document.body.appendChild(r),null!=r.contentDocument))return r.contentDocument.open(),r.contentDocument.write(o),void r.contentDocument.close();r.src=(c+"?p="+e+qss).substring(0,2e3);var i=document.getElementById("criteoTagsContainer");i?(i.appendChild(r),"undefined"!=typeof criteo_q&&"function"==typeof criteo_q.removeLater&&criteo_q.removeLater(r)):criteo_q.push({event:"appendTag",element:r})}};
+callDis(1222, 'widget.eu.criteo.com', true);
+})();
+
+(function() {
+var callWCADestination = function(aurl) {
+    var url = 'https://' + aurl;
+    var p = document.createElement('iframe');
+    p.width = p.height = '0';
+    p.style.display = 'none';
+    var iframeSource = "javascript:(function(){var d=document;";
+    iframeSource += 'd.createElement("img").src="' + encodeURI(url) + '";';
+    iframeSource += "setTimeout(function(){d.open();d.write('');d.close();},1000);})();";
+    p.src = iframeSource;
+    if (criteo_q) {
+        criteo_q.push({ event: 'appendTag', element: p, requiresDOM: 'non-blocking' });
+    }
+}
+var cto_fw_url = 'www.facebook.com/tr/?id=539780792873267&ev=ViewContent&cd[content_type]=product&cd[content_ids]=%5B%22-3583510552798786250%22%5D&cd[product_catalog_id]=1598361020467611&cd[product_category]=0&cd[criteo_audience_3_0]=B3&cd[external_id]=848b69f3-f957-488e-b1c5-2621572f1ec6&cd[application_id]=423936147658676';
+callWCADestination(cto_fw_url);})();
+
+
+/*-->*/
